@@ -1,0 +1,98 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(0, 55, 119, 1) 100%
+  );
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 900px;
+}
+
+.title {
+  margin-bottom: 60px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+.reset {
+  margin-top: 50px;
+  padding: 10px 50px 10px 50px;
+  background: none;
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
+  border: 3px solid #fff;
+  border-radius: 20px;
+}
+.squares-container {
+  background: #fff;
+  width: 600px;
+  height: 600px;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+}
+
+.square {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.color {
+  background: rgb(85, 91, 255) !important;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .title {
+    font-size: 55px;
+  }
+
+  .squares-container {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .squares-container {
+    width: 400px;
+    height: 400px;
+  }
+}
